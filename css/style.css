@@ -1,0 +1,196 @@
+@charset "utf-8";
+*{margin: 0px; padding: 0px; box-sizing: border-box;
+    color: #333333;}
+ul,ol,li{list-style: none;}
+a{text-decoration: none; color: #333333;}
+/* popup */
+.popup{
+    display: none;
+
+    /*
+    요소를 없애는 방법3
+     1. display : none;
+     강력한 방법 - 해당요소를 완전히 없애버립니다
+     따라서 높이나, 너비등이 무시됩니다
+
+     2. opacity : 0;
+     해당방법은 눈에만 보이지 않는 방법으로 
+     하지만 존재하기 때문에 클릭할 수 있는 요소인경우
+     보이지만 않을 뿐 클릭은 가능
+    따라서 단독으로 사용하지 않고, z-index를 병행합니다
+    3. appearance: none;
+    해당방법은 1,2방법을 합친거라고 할수있습니다
+    즉, 존재를 없앴지만 흔적은 남아있어서 높이와
+    너비가 영향을 줍니다
+    */
+    
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px; background-color: #eee;
+    border: 2px solid #000;
+    border-radius: 5px; padding: 20px; z-index: 10;
+}
+.popup h1{
+    font: bold 25px/1 '맑은 고딕';
+    text-align: center; margin-bottom: 20px;}
+.popup p {
+    font: 18px/1.5 "맑은 고딕";
+    text-align: center; margin-bottom: 20px;}
+.popup button{
+    position: absolute; bottom: 20px; right: 20px;
+    background-color: #333; color: #eee;
+    padding: 5px 10px;}
+/* header */
+header{width: 100%;}
+header .inner{
+    width: 1200px; height: 100px;
+    margin: 0 auto; 
+    position: relative;
+}
+header .inner h1{
+    position: absolute; top: 50%; left: 50px;
+    transform: translateY(-50%);
+}
+.gnb > ul{
+    position: absolute; top: 50%; right: 30px;
+    transform: translateY(-50%); 
+    z-index: 10;
+}
+.gnb >ul>li{
+    float: left; position: relative;
+    line-height: 60px; text-align: center;}
+.gnb >ul>li>a{
+    display: block; width: 150px; height: 60px;
+    font: bold 25px/60px "맑은 고딕";}
+.gnb ul>li>a:hover{
+    background-color: #333; color: #fff;}
+    .gnb >ul>li:hover>a{
+        background-color: #333; color: #fff;
+    }
+.sub{
+    position: absolute; top: 60px; left: 0;
+    display: none;
+}
+.sub>li>a{
+    display: block; width: 150px; height: 50px;
+    font-size: 16px; background-color: #555;
+    text-align: center; color: #888;
+}
+.sub>li>a:hover{
+    color: #333; background-color: #f8f8f8;
+}
+/* slide */
+#slide{
+    width: 1200px; height: 300px; margin: 0 auto;
+    overflow: hidden;
+}
+#slide .frame{
+    height: 900px; position: relative;
+}
+/* contentbox */
+#contentBox{
+    width: 1200px; height: 200px;
+    margin: 0 auto;
+    display: flex; justify-content: space-between;
+    align-items: center;
+}
+
+.NGboard{
+    flex: 1.5;
+    height: 200px;
+    overflow: hidden;
+}
+.NGboard .tab{
+    display: flex; width: 100%; height: 50px;
+}
+.NGboard .tab li{
+    width: 100px; background-color: #333;
+    display: flex; justify-content: center;
+    align-items: center;
+}
+.NGboard .tab li a{
+    font: bold 15px/1 "맑은 고딕"; color: #fff;
+}
+.NGboard .tab li.on{
+    background-color: #fff;
+}
+.NGboard .tab li.on a{
+    color: #333;
+}
+.content{
+    width: 100%; height: 150px; position: relative;
+}
+.content div{
+    width: 100%; height: 100%;
+    position: absolute; top: 0; left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0; z-index: 1;
+}
+.content div.on{
+    opacity: 1; z-index: 2;
+}
+#notice ul{width: 100%;}
+#notice ul li{
+    display: flex; justify-content: space-between;
+    height: 30px; cursor: pointer;
+}
+#notice ul li a{
+    font: 13px/30px "맑은 고딕"; color: #333;
+    margin-left: 30px;
+}
+#notice ul li span{
+    font: 10px/30px "맑은 고딕"; color: #333;
+    margin-right: 30px;
+}
+
+#notice ul li:hover{
+    background-color: #eee;
+}
+/* banner */
+.banner{
+    flex: 1;
+    width: 100%; height: 100%; 
+    overflow: hidden;
+    background-color: #888;
+}
+.banner img{
+    width: 100%; height: 100%; 
+    object-fit: cover;
+}
+.baro{
+    flex:1;
+    width: 100%; height: 100%; overflow: hidden;
+    display: flex; justify-content: space-evenly;
+    align-items: center; padding: 5px;
+}
+.baro a{
+    flex: 1; 
+    display: flex; flex-direction: column;
+    padding: 20px;
+}
+.baro a span{font-size: 10px; text-align: center;}
+
+footer{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex; justify-content: space-between;
+}
+footer .footer_logo{
+    flex: 1.5;
+    display: flex; 
+    justify-content: center;
+    align-items: center;}
+footer .copyright{
+    flex: 3;
+    text-align: center;}
+footer .copyright span{
+    font: bold 12px/1 "arial"; color: #333;}
+footer .sns{
+    flex: 1;
+    display: flex;
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+    align-items: center;
+}

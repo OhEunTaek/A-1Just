@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST 쇼핑몰</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script/jquery-3.6.0.min.js"></script>
+    <script defer src="./script/main.js"></script>
+    <!-- <style></style>
+    이렇게 내부에다가도 스타일을 입힐 수있습니다
+    -->
+</head>
+<body>
+    <aside class="popup">
+        <h1>제목: 쇼핑몰 배송비 정책 변경 안내</h1>
+        <p>항상 JUST쇼핑몰을 이용해 주시는 고객님께 진심으로 감사드립니다.
+            저희 JUST쇼핑몰 무료배송 기준이 택배사 운임비 인상으로 인하여
+            부득이하게 배송비 정책이 변경된 점 양해 부탁드립니다.</p>
+        <p>쇼핑몰 일반 배송비는 2,500원이며, 5만원이상 구매시 무료배송입니다.
+            5만원이하 주문건에는 부득이하게 배송비가 발생함을 알려 드립니다.
+            (2023년 3월 7일 기준)
+            </p>
+        <p>더 나은 배송 서비스와 안정된 물류 시스템으로
+            고객님께 만족을 드릴 수 있도록 항상 노력하겠습니다.</p>
+        <p>감사합니다.</p>
+        <button id="close">x 닫기</button>
+    </aside>
+    <header>
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="just 쇼핑몰 로고">
+                </a>
+            </h1>
+            <nav class="gnb">
+                <!-- ul>li*4>a+ul.sub>li*4>a -->
+                <!-- ul>li*4>a[href="#"]+ul.sub>li*4>a[href="#"] -->
+                <ul>
+                    <li>
+                        <a href="#">탑</a>
+                        <ul class="sub">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">아우터</a>
+                        <ul class="sub">
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">머플러</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">팬츠</a>
+                        <ul class="sub">
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">레깅스</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">악세서리</a>
+                        <ul class="sub">
+                            <li><a href="#">귀고리</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="slide">
+        <!-- ul.frame>li*3>img -->
+        <ul class="frame">
+            <li><img src="images/visual1.jpg" alt="JUST 쇼핑몰 새단장 이벤트
+                옷사면 옷줄게! 모든 상품 1+1 BIG EVENT"></li>
+            <li><img src="images/visual2.jpg" alt="SHOPPING WEEK
+                봄시즌 마지막 쇼핑위크 최대 70% 할인"></li>
+            <li><img src="images/visual3.jpg" alt="총알보다 빠른 당일 배송
+                오전 2시 결제건 무료배송+당일발송"></li>
+        </ul>
+    </section>
+    <section id="contentBox">
+        <article class="NGboard">
+            <!-- ul.tab>li*2>a -->
+            <ul class="tab">
+                <li class="on"><a href="#notice">공지사항</a></li>
+                <li><a href="#gallery">갤러리</a></li>
+            </ul>
+            <div class="content">
+                <div id="notice" class="on">
+                    <!-- ul>li*4>a[href="#"]+span -->
+                    <ul>
+                        <li><a href="#">3월 재입고 품목을 알려드립니다.</a><span>2023.03.14</span></li>
+                        <li><a href="#">반품/환불 규정에 대해 알려드립니다.</a><span>2023.03.06</span></li>
+                        <li><a href="#">S/S 시즌 신규 의류 신상품 안내</a><span>2023.02.22</span></li>
+                        <li><a href="#">신규회원 대상 할인 이벤트 안내</a><span>2023.01.17</span></li>
+                    </ul>
+                </div>
+                <div id="gallery">
+                    <!-- a[href="#"]*3>img -->
+                    <a href="#"><img src="images/gal1.jpg" alt="JUST 쇼핑몰 새단장 이벤트
+                        옷사면 옷줄게! 모든 상품 1+1 BIG EVENT"></a>
+                    <a href="#"><img src="images/gal2.jpg" alt="SHOPPING WEEK
+                        봄시즌 마지막 쇼핑위크 최대 70% 할인"></a>
+                    <a href="#"><img src="images/gal3.jpg" alt="총알보다 빠른 당일 배송
+                        오전 2시 결제건 무료배송+당일발송"></a>
+                </div>
+                <!-- src, href, url의 차이
+                src = 리소스를 직접적으로 가져오는 형태
+                src속성을 담은 요소가 직접적으로 리소스를 사용하는것
+                href= 리소스를 간접적으로 가져오는형태(직접사용하진 않음)
+                        보통 링크를 담는 역할을 합니다
+                url = 스타일시트에서만 사용합니다
+                 background-image: url(images/gal2.jpg);
+                -->
+            </div>
+        </article>
+        <article class="banner">
+            <img src="images/banner.jpg" alt="놓치면 안될 여름휴가 필수템
+            #휴가 #인생샷 등극">
+        </article>
+        <article class="baro">
+            <!-- a[href="#"]*3>img+span -->
+            <a href="#"><img src="images/baro1.png" alt="고객센터"><span>고객센터</span></a>
+            <a href="#"><img src="images/baro2.png" alt="배송안내"><span>배송안내</span></a>
+            <a href="#"><img src="images/baro3.png" alt="자주하는 질문"><span>자주하는질문</span></a>
+        </article>
+    </section>
+    <footer>
+        <h2 class="footer_logo">
+            <a href="#">
+                <img src="images/footer_logo.png"
+                 alt="저스트 쇼핑몰 푸터로고">
+            </a>
+        </h2>
+        <div class="copyright">
+            <span>Copyright 텍스트
+                서울특별시 강남구 테헤란로 152 (역삼동 강남파이낸스센터) <br>
+                COPYRIGHTⓒ by WEBDESIGN. ALL RIGHTS RESERVED
+               </span>
+        </div>
+        <div class="sns">
+            <!-- a[href="#"]*3>img -->
+            <a href="#"><img src="images/sns1.png" alt="인스타그램"></a>
+            <a href="#"><img src="images/sns2.png" alt="카카오톡"></a>
+            <a href="#"><img src="images/sns3.png" alt="페이스북"></a>
+        </div>
+    </footer>
+</body>
+</html>
